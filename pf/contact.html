@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="index.html">Citation</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto  mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+    </div>
+  </div>
+</nav>
+</header>
+<main>
+    <div class="container">
+        <div class="row col-6 m-auto">
+            <div class="form-control bg- my-5">
+                <h1 class="text-center">Contactez-nous</h1>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nom & Prenom</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+ <footer class="container">
+    <div class="row">
+      <div class="col-12 text-center py-3">
+        <p>© copyright by Mahmoud | 2025. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // script pour eviter les injection html sur le formulaire
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche l'envoi du formulaire
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Validation simple
+        if (name && email && message) {
+            alert('Merci pour votre message, ' + name + '!');
+        } else {
+            alert('Veuillez remplir tous les champs.');
+        }
+    });
+  </script>
+</body>
+</html>
