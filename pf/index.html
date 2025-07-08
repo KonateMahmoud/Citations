@@ -41,13 +41,13 @@
         </figure>
       </div>
       <div class="btn btn-success col-6 mx-auto">Voir une autre citation</div>
-      <a href="" class="text-decoration-none text-black">Partager cette citation sur whatsapp</a>
+      <a href="" id="partage" class=" btn py-2 col-4 btn-secondary g-0">Partager cette citation sur whatsapp</a>
     </div>
   </div>
   <div class="container">
     <div class="row py-5">
       <div class="col-12 ">
-        <h2>Suiviez aussi d'autres citation au format image</h2>
+        <h1>Suiviez aussi d'autres citation au format image</h1>
         <div class="d-flex justify-content-center">
           <img id="auto" src="https://www.citation-celebre.com/wp-content/uploads/2020/01/citation-celebre-1.jpg" alt="Citation image" class="img-fluid">
       </div>
@@ -78,14 +78,14 @@
         window.open(url, '_blank');
       }
       // Ajouter l'événement de clic pour le partage
-      const shareLink = document.querySelector('a.text-decoration-none');
-      shareLink.addEventListener('click', function(event) {
+      const shareButton = document.getElementById('partage');
+      shareButton.addEventListener('click', function(event) {
         event.preventDefault(); // Empêche le lien de naviguer
         shareOnWhatsApp(); // Appelle la fonction de partage
       });
 
       // Ajouter un gestionnaire d'événement pour le bouton de partage
-      const whatsappButton = document.querySelector('.text-decoration-none');
+      const whatsappButton = document.querySelector('.g-0');
       whatsappButton.addEventListener('click', function(event) {
         event.preventDefault(); // Empêche le lien de naviguer
         shareOnWhatsApp(); // Appelle la fonction de partage
